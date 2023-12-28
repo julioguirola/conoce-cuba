@@ -1,7 +1,7 @@
 {
   "name": "conoce-cuba",
   "version": "1.0.0",
-  "description": "julio esto que puse es una idea loca mia pero para tener una idea esa primera foto es un inico dime tu despues que era lo otro que habia que poner ahi que no me acuerdo",
+  "description": "conoce-cuba",
   "main": "app.js",
   "scripts": {
     "dev": "node --watch app.js",
