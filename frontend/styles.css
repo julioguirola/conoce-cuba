@@ -92,13 +92,9 @@ main article {
 article img {
     box-shadow: 0 0 4px black;
     border-radius: 3px;
+
 }
 
 nav img {
     border-radius: 50%;
-}
-
-article div {
-    display: grid;
-    place-content: center;
 }
