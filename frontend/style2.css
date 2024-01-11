@@ -128,12 +128,12 @@ h1 {
   margin-bottom: 0;
   margin-left: 50px;
 }
+.texto_foot {
+  text-align: center;
+}
 .fut {
   display: inline-block;
   margin-left: 60px;
-  text-align: center;
-}
-.texto_foot {
   text-align: center;
 }
 

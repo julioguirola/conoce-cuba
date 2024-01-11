@@ -8,33 +8,15 @@
     <link rel="icon" href="logo.jpg" type="image/x-icon">
     <script src="front.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            let imagenes = [
-                "landing1.jpg",
-                "landing2.jpg",
-                "landing3.jpg",
-                "landing4.jpg",
-                "landing5.jpg",
-            ];
-            
-            let index = 0;
-            
-            let mainimageImage = document.getElementById("landingImg");
-            
-            function cambiarimagen() {
-                mainimageImage.src = imagenes[index];
-            
-                index = (index + 1) % imagenes.length;
-            }
-            
-            setInterval(cambiarimagen, 5000);
-        })
     </script>
 </head>
 <body>
     <header>
+        <div>
+            <img src="logo.jpg" width="100" height="100">
+            <h1 class="nombre">Conoce a Cuba Primero</h1>
+        </div>
         <nav>
-            <img src="logo.jpg" width="80" height="80">
             <a href="">Inicio</a>
             <a href="">Sueños Cumplidos</a>
             <a href="">Proyectos</a>
@@ -43,7 +25,9 @@
     <main>
         <h1>¡Bienvenidos a Conoce a Cuba Primero!</h1>
         <article>
-            <img src="landing5.jpg" id="landingImg">
+            <div>
+                <img class="trini" src="landing5.jpg" id="landingImg">
+            </div>
             <div>
                 <p>
                     Somos un apasionado
@@ -80,6 +64,16 @@
     </main>
     <footer>
        <p>Advertencia: En este grupo no se compra ni revende nada, no se hacen comentarios politicos,religiosos,ni discriminatorios.Esto es solo para hablar de los viajes y las experiencias. </p>
+       <div class="texto_foot">
+        <p class="textito"><u>Siguenos en nuestra redes sociales:</u></p>
+  
+        <div class="redes">
+          <a href=""><img class="imagelogito" src="https://cdn.icon-icons.com/icons2/996/PNG/512/instagram_social_media_online_icon-icons.com_75342.png" alt=""></a>
+          <a href=""><img class="imagelogito" src="https://cdn.icon-icons.com/icons2/996/PNG/512/facebook_social_media_online_icon-icons.com_75341.png" alt=""></a>
+          <a href=""><img class="imagelogito" src="https://cdn.icon-icons.com/icons2/996/PNG/512/whatsapp_social_media_online_icon-icons.com_75348.png" alt=""></a>
+          <a href=""><img class="imagelogito" src="https://cdn.icon-icons.com/icons2/996/PNG/512/play_youtube_social_media_online_icon-icons.com_75350.png" alt=""></a>
+        </div>
+      </div>
     </footer>
 </body>
 </html>
