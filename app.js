@@ -6,7 +6,7 @@ app.use(express.json())
 app.use(express.static('./frontend'))
 
 app.get('/', (req,res) => {
-    res.sendFile(process.cwd() + '/frontend/index.html')
+    res.sendFile(process.cwd() + '/frontend/index2.html')
 })
 
 app.get('/realizados', (req,res) => {
@@ -25,4 +25,6 @@ app.get('/proyectos/:id', (req,res) => {
     const {id} = req.params
 })
 
-
+app.listen(8080 , () => {
+    console.log("http://localhost:8080")
+})

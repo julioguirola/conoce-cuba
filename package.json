@@ -2,6 +2,7 @@
   "name": "conoce-cuba",
   "version": "1.0.0",
   "description": "conoce-cuba",
+  "type": "module",
   "main": "app.js",
   "scripts": {
     "dev": "node --watch app.js",

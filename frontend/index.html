@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conoce Cuba Primero</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <script src="front.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let imagenes = [
+                "landing1.jpg",
+                "landing2.jpg",
+                "landing3.jpg",
+                "landing4.jpg",
+                "landing5.jpg",
+            ];
+            
+            let index = 0;
+            
+            let mainimageImage = document.getElementById("landingImg");
+            
+            function cambiarimagen() {
+                mainimageImage.src = imagenes[index];
+            
+                index = (index + 1) % imagenes.length;
+            }
+            
+            setInterval(cambiarimagen, 5000);
+        })
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logo.jpg" width="80" height="80">
+            <a href="">Inicio</a>
+            <a href="">Sueños Cumplidos</a>
+            <a href="">Proyectos</a>
+        </nav>
+    </header>
+    <main>
+        <h1>¡Bienvenidos a Conoce a Cuba Primero!</h1>
+        <article>
+            <div>
+                <img src="landing5.jpg" id="landingImg" width="300" height="150">
+            </div>
+            <div>
+                <p>
+                    Somos un apasionado
+                    <strong>grupo de aficionados a la fotografía, los viajes y la naturaleza</strong>.
+                    Nos dedicamos a explorar y capturar la belleza única de Cuba.
+                    Permítanos compartirles por qué nuestra propuesta es una experiencia
+                    inolvidable.
+                </p>
+                <p>
+                    Nuestro grupo se dedica a organizar viajes a medida que combinan la
+                    <strong>exploración fotográfica con la naturaleza exuberante de Cuba</strong>. Nos
+                    enorgullece ofrecer una experiencia auténtica y enriquecedora,
+                    permitiéndote sumergirte en la cultura cubana. Nuestros guías locales
+                    conocen a fondo el país y sus rincones secretos, asegurando que no te
+                    pierdas ninguna oportunidad de capturar la esencia de Cuba.
+                </p>
+            </div>
+        </article>
+        <p class="lastP">
+            En Conoce a Cuba Primero, nos comprometemos a brindarte una
+            experiencia segura y cómoda. Trabajamos con socios locales confiables,
+            seleccionando cuidadosamente alojamientos y asegurando que cada
+            detalle esté cuidado.
+            Si eres un
+            <strong>amante de la fotografía, los viajes y la naturaleza</strong>,
+            únete a nosotros en una aventura inolvidable en la cautivadora isla de
+            Cuba.
+        </p>
+        <p class="lastP"><strong>
+            ¡Te
+            invitamos a unirte a Conoce a Cuba Primero y explorar este tesoro
+            caribeño de manera única y memorable!
+        </strong></p>
+    </main>
+    <footer>
+       <p>Advertencia: En este grupo no se compra ni revende nada, no se hacen comentarios politicos,religiosos,ni discriminatorios.Esto es solo para hablar de los viajes y las experiencias. </p>
+    </footer>
+</body>
+</html>
