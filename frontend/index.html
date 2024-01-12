@@ -8,6 +8,27 @@
     <link rel="icon" href="logo.jpg" type="image/x-icon">
     <script src="front.js"></script>
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let imagenes = [
+                "landing1.jpg",
+                "landing2.jpg",
+                "landing3.jpg",
+                "landing4.jpg",
+                "landing5.jpg",
+            ];
+            
+            let index = 0;
+            
+            let mainimageImage = document.getElementById("landingImg");
+            
+            function cambiarimagen() {
+                mainimageImage.src = imagenes[index];
+            
+                index = (index + 1) % imagenes.length;
+            }
+            
+            setInterval(cambiarimagen, 2000);
+        })
     </script>
 </head>
 <body>
@@ -26,7 +47,7 @@
         <h1>¡Bienvenidos a Conoce a Cuba Primero!</h1>
         <article>
             <div>
-                <img class="trini" src="landing5.jpg" id="landingImg">
+                <img  id="landingImg" class="trini" src="landing5.jpg" id="landingImg">
             </div>
             <div>
                 <p>
