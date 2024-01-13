@@ -1,4 +1,5 @@
 import express, { json } from "express";
+import { getProyectos } from "./db_connect/db";
 
 const app = express();
 
@@ -7,7 +8,7 @@ app.use(express.static('./frontend'))
 app.use(express.static('./frontend/fotos'))
 
 app.get('/', (req,res) => {
-    res.sendFile(process.cwd() + '/frontend/index2.html')
+    res.sendFile(process.cwd() + '/frontend/index.html')
 })
 
 app.get('/realizados', (req,res) => {
@@ -16,6 +17,16 @@ app.get('/realizados', (req,res) => {
 
 app.get('/proyectos', (req,res) => {
     res.sendFile(process.cwd() + '/frontend/proyectos.html')
+})
+
+app.post('/get_data', async (req,res) => {
+    const finalizado = req.body.fin
+    const result = await getProyectos(finalizado)
+    if (result) {
+        res.json({data:true, content:result})
+    } else {
+        res.json({data:false})
+    }
 })
 
 app.get('/realizados/:id', (req,res) => {
