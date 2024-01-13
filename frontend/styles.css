@@ -11,6 +11,7 @@ header {
     box-shadow: 0 0 8px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    z-index: 2;
 }
 
 header div {
@@ -54,24 +55,10 @@ nav a:hover {
     border-radius: 10px;
 }
 
-main {
-    padding: 20px;
-}
 
-main p {
-    font-size: 20px;
-}
-
-main h1 {
-    text-align: center;
-    text-shadow: 0 0 2px rgb(78, 76, 76);
-}
-
-.lastP {
-    text-align: center;
-}
 
 footer {
+    text-align: center;
     background-color: #1b834a;
     padding: 20px;
     box-shadow: 0 0 8px;
@@ -85,43 +72,21 @@ footer p {
     text-shadow: 0 0 7px black;
 }
 
-main article {
-    padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(300px, 1fr)
-    );
-    place-content: center;
-    gap: 20px;
-       
-}
-
-.trini {
-    width: 100%;
-    height: auto;
-
-}
-
 header div img {
     border-radius: 50%;
 }
   
-.textito {
-    font-family: Bahnschrift;
+footer p:last-child {
     line-height: 1.6;
     font-size: 16px;
     text-align: center;
 }
-.texto_foot {
-    text-align: center;
-}
 
-.imagelogito {
+footer img {
     width: 30px;
 }
 
-.redes {
+footer div {
     display: flex;
     gap: 8px;
     justify-content: center;

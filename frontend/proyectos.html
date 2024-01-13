@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conoce a Cuba Primero</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <style>
+      main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        place-items: center;
+        gap: 10px;
+        margin: 10px;
+        z-index: 1;
+      }
+
+      section {
+            height: 200px;
+            width: 300px;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 0 8px black;
+            transition-duration: .5s;
+      }
+
+      section:hover {
+          height: 250px;
+          width: 350px;
+      }
+
+      section img {
+          width: 100%;
+          height: 100%;
+          border-radius: 8px;
+      }
+
+      section div {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          background-color: #1b834acc;
+          color: aliceblue;
+          text-align: center;
+          border-bottom-right-radius: 8px;
+          border-bottom-left-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="logo.jpg" width="100" height="100">
+        <h1 class="nombre">Conoce a Cuba Primero</h1>
+      </div>
+      <nav>
+          <a href="/">Inicio</a>
+          <a href="">Sueños Cumplidos</a>
+          <a href="/proyectos">Proyectos</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <img src="trinidad 1.jpg" alt="">
+        <div><p>Trinidad</p></div>
+      </section>
+      <section>
+        <img src="varadero.jpg" alt="">
+        <div><p>Varadero</p></div>
+      </section>
+      <section>
+        <img src="vinales.jpg" alt="">
+        <div><p>Viñales</p></div>
+      </section>
+      <section>
+        <img src="Baracoa-Cuba.jpg" alt="">
+        <div><p>Baracoa</p></div>
+      </section>
+      <section>
+        <img src="Jardines del Rey.jpg" alt="">
+        <div><p>Jardines del Rey</p></div>
+      </section>
+      <section>
+        <img src="Baracoa-Cuba2.jpg" alt="">
+        <div><p>Baracoa</p></div>
+      </section>
+    </main>
+  
+    <footer>
+      <p>Advertencia: En este grupo no se compra ni revende nada, no se hacen comentarios politicos,religiosos,ni discriminatorios.Esto es solo para hablar de los viajes y las experiencias. </p>
+      <p><u>Siguenos en nuestra redes sociales:</u></p>
+
+      <div>
+        <a href=""><img src="https://cdn.icon-icons.com/icons2/996/PNG/512/instagram_social_media_online_icon-icons.com_75342.png" alt=""></a>
+        <a href=""><img src="https://cdn.icon-icons.com/icons2/996/PNG/512/facebook_social_media_online_icon-icons.com_75341.png" alt=""></a>
+        <a href=""><img src="https://cdn.icon-icons.com/icons2/996/PNG/512/whatsapp_social_media_online_icon-icons.com_75348.png" alt=""></a>
+        <a href=""><img src="https://cdn.icon-icons.com/icons2/996/PNG/512/play_youtube_social_media_online_icon-icons.com_75350.png" alt=""></a>
+      </div>
+    </footer>
+    
+  </body>
+</html>

@@ -4,6 +4,7 @@ const app = express();
 
 app.use(express.json())
 app.use(express.static('./frontend'))
+app.use(express.static('./frontend/fotos'))
 
 app.get('/', (req,res) => {
     res.sendFile(process.cwd() + '/frontend/index2.html')
@@ -28,3 +29,5 @@ app.get('/proyectos/:id', (req,res) => {
 app.listen(8080 , () => {
     console.log("http://localhost:8080")
 })
+
+//token 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

@@ -1,0 +1,71 @@
+<head>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(300px, 1fr)
+            );
+            place-items: center;
+            height: 80vh;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        section {
+            height: 200px;
+            width: 300px;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 0 8px black;
+            transition-duration: .5s;
+        }
+
+        section:hover {
+            height: 250px;
+            width: 350px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        div {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #1b834acc;
+            color: aliceblue;
+            text-align: center;
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <img src="trinidad 1.jpg" alt="">
+        <div><p>Trinidad</p></div>
+    </section>
+    <section>
+        <img src="varadero.jpg" alt="">
+        <div><p>Varadero</p></div>
+    </section>
+    <section>
+        <img src="vinales.jpg" alt="">
+        <div><p>Viñales</p></div>
+    </section>
+    <section>
+        <img src="Baracoa-Cuba.jpg" alt="">
+        <div><p>Baracoa</p></div>
+    </section>
+    <section>
+        <img src="Jardines del Rey.jpg" alt="">
+        <div><p>Jardines del Rey</p></div>
+    </section>
+    <section>
+        <img src="Baracoa-Cuba2.jpg" alt="">
+        <div><p>Baracoa</p></div>
+    </section>
+</body>

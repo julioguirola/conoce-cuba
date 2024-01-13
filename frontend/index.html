@@ -6,7 +6,6 @@
     <title>Conoce Cuba Primero</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="logo.jpg" type="image/x-icon">
-    <script src="front.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             let imagenes = [
@@ -30,24 +29,59 @@
             setInterval(cambiarimagen, 2000);
         })
     </script>
+    <style>
+        main {
+            padding: 20px;
+        }
+
+        main p {
+            font-size: 20px;
+        }
+
+        main h1 {
+            text-align: center;
+            text-shadow: 0 0 2px rgb(78, 76, 76);
+        }
+
+        main p:last-child {
+            text-align: center;
+        }
+
+        main article {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(300px, 1fr)
+            );
+            place-content: center;
+            gap: 20px;  
+        }
+
+        article img {
+            width: 100%;
+            height: auto;
+        }
+
+    </style>
 </head>
 <body>
     <header>
         <div>
             <img src="logo.jpg" width="100" height="100">
-            <h1 class="nombre">Conoce a Cuba Primero</h1>
+            <h1 >Conoce a Cuba Primero</h1>
         </div>
         <nav>
-            <a href="">Inicio</a>
+            <a href="/">Inicio</a>
             <a href="">Sueños Cumplidos</a>
-            <a href="">Proyectos</a>
+            <a href="/proyectos">Proyectos</a>
         </nav>
     </header>
     <main>
         <h1>¡Bienvenidos a Conoce a Cuba Primero!</h1>
         <article>
             <div>
-                <img  id="landingImg" class="trini" src="landing5.jpg" id="landingImg">
+                <img src="landing5.jpg" id="landingImg">
             </div>
             <div>
                 <p>
@@ -67,7 +101,7 @@
                 </p>
             </div>
         </article>
-        <p class="lastP">
+        <p >
             En Conoce a Cuba Primero, nos comprometemos a brindarte una
             experiencia segura y cómoda. Trabajamos con socios locales confiables,
             seleccionando cuidadosamente alojamientos y asegurando que cada
@@ -77,24 +111,22 @@
             únete a nosotros en una aventura inolvidable en la cautivadora isla de
             Cuba.
         </p>
-        <p class="lastP"><strong>
+        <p><strong>
             ¡Te
             invitamos a unirte a Conoce a Cuba Primero y explorar este tesoro
             caribeño de manera única y memorable!
         </strong></p>
     </main>
     <footer>
-       <p>Advertencia: En este grupo no se compra ni revende nada, no se hacen comentarios politicos,religiosos,ni discriminatorios.Esto es solo para hablar de los viajes y las experiencias. </p>
-       <div class="texto_foot">
-        <p class="textito"><u>Siguenos en nuestra redes sociales:</u></p>
+        <p>Advertencia: En este grupo no se compra ni revende nada, no se hacen comentarios politicos,religiosos,ni discriminatorios.Esto es solo para hablar de los viajes y las experiencias. </p>
+        <p><u>Siguenos en nuestra redes sociales:</u></p>
   
-        <div class="redes">
-          <a href=""><img class="imagelogito" src="https://cdn.icon-icons.com/icons2/996/PNG/512/instagram_social_media_online_icon-icons.com_75342.png" alt=""></a>
-          <a href=""><img class="imagelogito" src="https://cdn.icon-icons.com/icons2/996/PNG/512/facebook_social_media_online_icon-icons.com_75341.png" alt=""></a>
-          <a href=""><img class="imagelogito" src="https://cdn.icon-icons.com/icons2/996/PNG/512/whatsapp_social_media_online_icon-icons.com_75348.png" alt=""></a>
-          <a href=""><img class="imagelogito" src="https://cdn.icon-icons.com/icons2/996/PNG/512/play_youtube_social_media_online_icon-icons.com_75350.png" alt=""></a>
+        <div>
+          <a href=""><img src="https://cdn.icon-icons.com/icons2/996/PNG/512/instagram_social_media_online_icon-icons.com_75342.png" alt=""></a>
+          <a href=""><img src="https://cdn.icon-icons.com/icons2/996/PNG/512/facebook_social_media_online_icon-icons.com_75341.png" alt=""></a>
+          <a href=""><img src="https://cdn.icon-icons.com/icons2/996/PNG/512/whatsapp_social_media_online_icon-icons.com_75348.png" alt=""></a>
+          <a href=""><img src="https://cdn.icon-icons.com/icons2/996/PNG/512/play_youtube_social_media_online_icon-icons.com_75350.png" alt=""></a>
         </div>
-      </div>
     </footer>
 </body>
 </html>
