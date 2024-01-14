@@ -58,7 +58,7 @@ nav a:hover {
 
 
 footer {
-    text-align: center;
+    text-align: center justify;
     background-color: #1b834a;
     padding: 20px;
     box-shadow: 0 0 8px;
@@ -70,6 +70,8 @@ footer p {
     text-align: center;
     color: aliceblue;
     text-shadow: 0 0 7px black;
+    
+    
 }
 
 header div img {
@@ -79,7 +81,7 @@ header div img {
 footer p:last-child {
     line-height: 1.6;
     font-size: 16px;
-    text-align: center;
+    text-align: justify center;
 }
 
 footer img {
