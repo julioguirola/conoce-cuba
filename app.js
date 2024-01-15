@@ -1,5 +1,5 @@
 import express, { json } from "express";
-import { getProyectos } from "./db_connect/db";
+import { getProyectos } from "./db_connect/db.js";
 
 const app = express();
 
