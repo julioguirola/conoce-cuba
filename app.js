@@ -1,5 +1,5 @@
 import express, { json } from "express";
-import { getProyectos } from "./db_connect/db.js";
+import { getProyecto, getProyectos } from "./db_connect/db.js";
 
 const app = express();
 
@@ -11,8 +11,8 @@ app.get('/', (req,res) => {
     res.sendFile(process.cwd() + '/frontend/index.html')
 })
 
-app.get('/realizados', (req,res) => {
-    res.sendFile(process.cwd() + '/frontend/realizados.html')
+app.get('/terminados', (req,res) => {
+    res.sendFile(process.cwd() + '/frontend/terminados.html')
 })
 
 app.get('/proyectos', (req,res) => {
@@ -20,17 +20,19 @@ app.get('/proyectos', (req,res) => {
 })
 
 app.post('/get_data', async (req,res) => {
-    const finalizado = req.body.fin
+    const {finalizado} = req.body
     const result = await getProyectos(finalizado)
     if (result) {
-        res.json({data:true, content:result})
+        res.json({succes:true, content:result})
     } else {
-        res.json({data:false})
+        res.json({succes:false})
     }
 })
 
-app.get('/realizados/:id', (req,res) => {
+app.get('/terminados/:id', async (req,res) => {
     const {id} = req.params
+    const result = await getProyecto(id)
+    res.json(result)
 })
 
 app.get('/proyectos/:id', (req,res) => {

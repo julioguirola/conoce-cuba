@@ -42,12 +42,12 @@
 
 import postgres from "postgres"
 
-const sql = postgres('postgres://fl0user:TD7HKbU4tZoq@ep-hidden-glitter-78222556.us-east-2.aws.neon.fl0.io:5432/servtesdb?sslmode=require', {
-  host                 : 'ep-hidden-glitter-78222556.us-east-2.aws.neon.fl0.io',           
+const sql = postgres('postgres://fl0user:********@ep-wispy-tree-86137389.us-east-2.aws.neon.fl0.io:5432/concecubadb?sslmode=require', {
+  host                 : 'ep-wispy-tree-86137389.us-east-2.aws.neon.fl0.io',           
   port                 :  5432,          
-  database             : 'servtesdb',            
+  database             : 'concecubadb',            
   username             : 'fl0user',           
-  password             : 'TD7HKbU4tZoq',
+  password             : 'OWrUA2TBwH4d',
   ssl                  : 'require'
 })
 
@@ -57,8 +57,8 @@ export async function getProyectos(finalizados) {
         const finalizado = finalizados ? 1 : 0
     
         const result = await sql`SELECT proyecto.id, location.name, location.foto, proyecto.fecha 
-                                FROM locations JOIN proyecto ON proyecto.location_id = location.id
-                                WHERE proyecto.finalizado = ${finalizado}`;
+                        FROM location JOIN proyecto ON proyecto.location_id = location.id
+                        WHERE proyecto.finalizado = ${finalizado}`;
     
         return result
 
@@ -68,14 +68,13 @@ export async function getProyectos(finalizados) {
     }
 }
 
-export async function getSubLocations(proyecto_id) {
+export async function getProyecto(proyecto_id) {
     
     try {
-        const result = await sql`select sublocation.id, sublocation.name, sublocation.description, sublocation.foto from
-                                sublocation join proyecto join proyecto_sublocation 
-                                on sublocation.id = proyecto_sublocation.sublocation_id and
-                                proyecto.id = proyecto_sublocation.proyecto_id
-                                where proyecto.id = ${proyecto_id}`;
+        const result = await sql`
+            select sublocation.id, sublocation.name, sublocation.description, sublocation.foto from sublocation join proyecto_sublocation
+            on proyecto_sublocation.sublocation_id = sublocation.id where proyecto_sublocation.proyecto_id = ${proyecto_id}
+        `;
 
         return result
 
@@ -85,41 +84,6 @@ export async function getSubLocations(proyecto_id) {
     }
 }
 
-export async function getSubLocation(sublocation_id) {
-
-    try {
-        const result = await sql`select id, name, description, foto from sublocation where id = ${sublocation_id}`;
-
-        return result
-
-    } catch (e) {
-       console.log(e)
-       return 
-    }
-}
-
-export async function getImages(id, column) {
-    try {
-        const result = await sql`select id, url from image where ${column} = ${id}`;
-
-        return result
-
-    } catch (e) {
-       console.log(e)
-       return 
-    }
-}
-
-export async function getLocation(id, column) {
-    try {
-        const result = await sql`select id, name, description, foto from image where ${column} = ${id}`;
-
-        return result
-
-    } catch (e) {
-       console.log(e)
-       return 
-    }
-}
-
+// test
+// console.log(await getProyecto(1))
 

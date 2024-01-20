@@ -1,0 +1,37 @@
+create table location (
+	id SERIAL,
+	name text,
+	description text,
+	foto text,
+	primary key (id)
+);
+
+create table sublocation (
+	id SERIAL,
+	location_id int,
+	name text,
+	description text,
+	foto text,
+	primary key (id)
+);
+
+create table image (
+	id SERIAL,
+	location_id int,
+	sub_location_id int,
+	url text,
+	primary key (id)
+);
+
+create table proyecto  (
+	id SERIAL,
+	location_id int,
+	fecha text,
+	finalizado int,
+	primary key (id)
+);
+
+create table proyecto_sublocation (
+	proyecto_id int,
+	sublocation_id int
+)
