@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conoce a Cuba Primero</title>
-    <link rel="stylesheet" href="<%="http://localhost:8080/"%>styles.css"/>
-    <link rel="icon" href="<%="http://localhost:8080/"%>logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles.css"/>
+    <link rel="icon" href="/logo.jpg" type="image/x-icon" />
       <style>
         article {
         display: grid;
@@ -67,7 +67,7 @@
   <body>
     <header>
       <div>
-        <img src="<%="http://localhost:8080/"%>logo.jpg" width="100" height="100" />
+        <img src="/logo.jpg" width="100" height="100" />
         <h1 class="nombre">Conoce a Cuba Primero</h1>
       </div>
       <nav>
@@ -81,7 +81,7 @@
       <article>
       <% datos.forEach(function(dato) { %>
         <section>
-          <img src=<%="http://localhost:8080/"%><%= dato.foto %> />
+          <img src=<%="/"%><%= dato.foto %> />
           <div>
             <p><%= dato.name %></p>
           </div>
