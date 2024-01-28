@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conoce a Cuba Primero</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="logo.jpg" type="image/x-icon" />
-    <style>
-      main {
+    <link rel="stylesheet" href="<%="http://localhost:8080/"%>styles.css"/>
+    <link rel="icon" href="<%="http://localhost:8080/"%>logo.jpg" type="image/x-icon" />
+      <style>
+        article {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         place-items: center;
@@ -53,44 +53,21 @@
         border-bottom-right-radius: 8px;
         border-bottom-left-radius: 8px;
       }
-    </style>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        let finalizado = true
-        fetch("/get_data", {
-          method: "POST",
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({finalizado})
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.succes) {
-              let main = document.getElementsByTagName("main")[0]
-              data.content.forEach(element => {
-                main.insertAdjacentHTML("beforeend", `
-                    <section id="terminado${element.id}" onclick="location.href = '/terminados/${element.id}?nombre=${element.name}'">
-                      <img src="${element.foto}" alt="" />
-                      <div>
-                        <p>${element.name}</p>
-                        <p>${element.fecha}</p>
-                      </div>
-                    </section>
-              `)
-              });
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-      })
-    </script>
+
+      .des {
+        padding: 20px;
+      }
+
+      .nombrePro {
+        text-align: center;
+      }
+      
+      </style>
   </head>
   <body>
     <header>
       <div>
-        <img src="logo.jpg" width="100" height="100" />
+        <img src="<%="http://localhost:8080/"%>logo.jpg" width="100" height="100" />
         <h1 class="nombre">Conoce a Cuba Primero</h1>
       </div>
       <nav>
@@ -100,8 +77,23 @@
       </nav>
     </header>
     <main>
+      <h1 class="nombrePro"><%= proyectoNombre %></h1>
+      <article>
+      <% datos.forEach(function(dato) { %>
+        <section>
+          <img src=<%="http://localhost:8080/"%><%= dato.foto %> />
+          <div>
+            <p><%= dato.name %></p>
+          </div>
+        </section>
+    <% }); %>
+   </article>
+   <div class="des">
+    <% datos.forEach(function(dato) { %>
+      <p><%=dato.description %></p>
+    <% }); %>
+  </div>
     </main>
-
     <footer>
       <p>
         Advertencia: En este grupo no se compra ni revende nada, no se hacen
