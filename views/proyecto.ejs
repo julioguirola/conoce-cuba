@@ -54,10 +54,6 @@
         border-bottom-left-radius: 8px;
       }
 
-      .des {
-        padding: 20px;
-      }
-
       .nombrePro {
         text-align: center;
       }
@@ -86,13 +82,9 @@
             <p><%= dato.name %></p>
           </div>
         </section>
+        <p><%=dato.description %></p>
     <% }); %>
    </article>
-   <div class="des">
-    <% datos.forEach(function(dato) { %>
-      <p><%=dato.description %></p>
-    <% }); %>
-  </div>
     </main>
     <footer>
       <p>

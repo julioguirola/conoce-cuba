@@ -20,9 +20,8 @@ app.get('/proyectos', (req,res) => {
     res.sendFile(process.cwd() + '/frontend/proyectos.html')
 })
 
-app.post('/get_data', async (req,res) => {
-    const {finalizado} = req.body
-    const result = await getProyectos(finalizado)
+app.post('/get_proyectos', async (req,res) => {
+    const result = await getProyectos()
     if (result) {
         res.json({succes:true, content:result})
     } else {
@@ -30,24 +29,17 @@ app.post('/get_data', async (req,res) => {
     }
 })
 
-app.get('/terminados/:id', async (req,res) => {
+app.get('/proyecto/:id', async (req,res) => {
     const {id} = req.params
-    const {nombre} = req.query
     const result = await getProyecto(id)
 
-    res.render("terminado.ejs", {
-        datos:result,
-        proyectoNombre: nombre
+    res.render("proyecto.ejs", {
+        datos:result
     })
-
-})
-
-app.get('/proyectos/:id', (req,res) => {
-    const {id} = req.params
 })
 
 app.listen(8080 , () => {
     console.log("http://localhost:8080")
 })
 
-//token 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
+//token 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
