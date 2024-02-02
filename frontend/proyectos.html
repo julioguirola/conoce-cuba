@@ -54,55 +54,36 @@
         border-bottom-left-radius: 8px;
       }
     </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("/get_proyectos", {
+          method: "GET"
+        })
+        .then(data => data.json())
+        .then(data => data.content.forEach(element => {
+                document.querySelector("main").insertAdjacentHTML("beforeend", `
+                <section id="proyecto${element.id}" onclick="location.href = '/proyecto/${element.id}'">
+                  <img src="${element.foto}"/>
+                  <div>
+                    <p>${element.lugar}</p>
+                    <p>${element.disponible == 1? "Disponible "+element.fecha:""}</p>
+                  </div>
+                </section>
+                `)
+        }))
+      })
+    </script>
   </head>
   <body>
     <header>
-      <div>
+      <nav>
         <img src="logo.jpg" width="100" height="100" />
         <h1 class="nombre">Conoce a Cuba Primero</h1>
-      </div>
-      <nav>
         <a href="/">Inicio</a>
-        <a href="/terminados">Sueños Cumplidos</a>
         <a href="/proyectos">Proyectos</a>
       </nav>
     </header>
     <main>
-      <section>
-        <img src="trinidad 1.jpg" alt="" />
-        <div>
-          <p>Trinidad</p>
-          <p>15/ 1/ 2024</p>
-        </div>
-      </section>
-      <section>
-        <img src="varadero.jpg" alt="" />
-        <div>
-          <p>Varadero</p>
-          <p>15/ 1/ 2024</p>
-        </div>
-      </section>
-      <section>
-        <img src="vinales.jpg" alt="" />
-        <div>
-          <p>Viñales</p>
-          <p>15/ 1/ 2024</p>
-        </div>
-      </section>
-      <section>
-        <img src="viñales.jpg" alt="" />
-        <div>
-          <p>Viñales</p>
-          <p>15/ 1/ 2024</p>
-        </div>
-      </section>
-      <section>
-        <img src="Jardines del Rey.jpg" alt="" />
-        <div>
-          <p>Jardines del Rey</p>
-          <p>15/ 1/ 2024</p>
-        </div>
-      </section>
     </main>
 
     <footer>

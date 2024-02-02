@@ -12,15 +12,11 @@ app.get('/', (req,res) => {
     res.sendFile(process.cwd() + '/frontend/index.html')
 })
 
-app.get('/terminados', (req,res) => {
-    res.sendFile(process.cwd() + '/frontend/terminados.html')
-})
-
 app.get('/proyectos', (req,res) => {
     res.sendFile(process.cwd() + '/frontend/proyectos.html')
 })
 
-app.post('/get_proyectos', async (req,res) => {
+app.get('/get_proyectos', async (req,res) => {
     const result = await getProyectos()
     if (result) {
         res.json({succes:true, content:result})
